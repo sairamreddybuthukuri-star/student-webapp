@@ -1,2 +1,4 @@
-FROM tomcat:9
-COPY target/student-webapp.war /usr/local/tomcat/webapps/
+FROM jenkins/jenkins:lts
+USER root
+RUN apt update && apt install -y maven
+USER jenkins
